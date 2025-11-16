@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郭栋 - 从业人员健康证</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-size: 14px;
+            color: #646464;
+            background-color: #f5f5f5;
+        }
+
+        .push-30-t {
+            margin-top: 30px !important;
+        }
+
+        .cert-container {
+            position: relative;
+            display: inline-block;
+            width: 90vw;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cert-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cert-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .cert-info div {
+            position: absolute;
+            font-size: clamp(8px, 3vw, 25px);
+            color: #000;
+            white-space: nowrap;
+        }
+
+        #name {
+            top: 16%;
+            left: 16%;
+        }
+
+        #gender {
+            top: 24%;
+            left: 16%;
+        }
+
+        #age {
+            top: 24%;
+            left: 34%;
+        }
+
+        #province {
+            top: 24%;
+            left: 54%;
+        }
+
+        #id-card-no {
+            top: 33%;
+            left: 23%;
+        }
+
+        #cert-date {
+            top: 43%;
+            left: 23%;
+        }
+
+        #valid-date {
+            top: 52%;
+            left: 23%;
+        }
+
+        #cert-no {
+            top: 61%;
+            left: 23%;
+        }
+
+        #cert-org {
+            top: 71.5%;
+            left: 23%;
+        }
+
+        #photo {
+            top: 16%;
+            left: 74%;
+            width: 22.5%;
+            height: 45%;
+        }
+
+        #photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #seal {
+            top: 15%;
+            left: 38%;
+            width: 39%;
+            height: auto;
+        }
+
+        #seal img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .qr-code-area {
+            top: 67%;
+            left: 76%;
+            width: 17%;
+            height: auto;
+        }
+
+        .qr-code-area #qrcode {
+            width: 100%;
+            height: auto;
+        }
+
+        .qr-code-area #qrcode img,
+        .qr-code-area #qrcode canvas {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-sm-12 push-30-t">
+        <div id="card-pic" class="cert-container">
+            <img src="pic/xinjiang_cert_bg.png" class="cert-image" alt="证书背景">
+            <div class="cert-info">
+                <div id="name">向富兴</div>
+                <div id="gender">男</div>
+                <div id="age">21</div>
+                <div id="province">汉</div>
+                <div id="id-card-no"></div>
+                <div id="cert-date">2025-11-16</div>
+                <div id="valid-date">2026-11-15</div>
+                <div id="cert-no">2511160118391206</div>
+                <div id="cert-org">长春路社区卫生服务中心</div>
+                <div id="photo">
+                    <img src="uploads/1746776723__55899627989503.jpg">
+                </div>
+                <div id="seal">
+                    <img src="pic/xinjiang_cert_seal.jpg">
+                </div>
+                <div id="qr-code-pic" class="qr-code-area">
+                    <div id="qrcode">
+                        <img src="qrcodes/qrcode.png">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
