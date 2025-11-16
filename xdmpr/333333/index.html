@@ -1,0 +1,310 @@
+<html class="no-focus" lang="zh"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>郭栋 - 从业人员健康证</title>
+    <meta name="description" content="">
+    <meta name="author" content="caiweiming">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+    <script src="/js/apply_mode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="/js/qrcode.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-size: 14px;
+            color: #646464;
+            background-color: #f5f5f5;
+        }
+
+        .no-focus *:focus {
+            outline: 0 !important;
+        }
+
+        a {
+            color: #5c90d2;
+            -webkit-transition: color 0.12s ease-out;
+            transition: color 0.12s ease-out;
+        }
+
+        a:hover,
+        a:focus {
+            color: #3169b1;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: #5c90d2;
+        }
+
+        h3,
+        .h3 {
+            font-size: 24px;
+        }
+
+        h4,
+        .h4 {
+            font-size: 20px;
+        }
+
+        .font-w400 {
+            font-weight: 400 !important;
+        }
+
+        .font-w600 {
+            font-weight: 600 !important;
+        }
+
+        .text-black {
+            color: #000;
+        }
+
+        a.text-black:hover,
+        a.text-black:active,
+        a.text-black:focus,
+        button.text-black:hover,
+        button.text-black:active,
+        button.text-black:focus {
+            color: #000;
+            opacity: .75;
+        }
+
+        .content {
+            margin: 0 auto;
+            padding: 16px 14px 1px;
+            max-width: 100%;
+            overflow-x: visible;
+        }
+
+        @media screen and (min-width: 768px) {
+            .content {
+                margin: 0 auto;
+                padding: 30px 30px 1px;
+                max-width: 100%;
+                overflow-x: visible;
+            }
+
+            .content.content-boxed {
+                max-width: 1280px;
+            }
+        }
+
+        .content-boxed {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1280px;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .push-10-t {
+            margin-top: 10px !important;
+        }
+
+        .push-30-t {
+            margin-top: 30px !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .cert-container {
+            position: relative;
+            display: inline-block;
+            width: 90vw;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cert-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .cert-info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .cert-info div {
+            position: absolute;
+            font-size: clamp(8px, 3vw, 25px);
+            color: #000;
+            white-space: nowrap;
+        }
+
+        #name {
+            top: 16%;
+            left: 16%;
+        }
+
+        #gender {
+            top: 24%;
+            left: 16%;
+        }
+
+        #age {
+            top: 24%;
+            left: 34%;
+        }
+
+        #province {
+            top: 24%;
+            left: 54%;
+        }
+
+        #id-card-no {
+            top: 33%;
+            left: 23%;
+        }
+
+        #cert-date {
+            top: 43%;
+            left: 23%;
+        }
+
+        #valid-date {
+            top: 52%;
+            left: 23%;
+        }
+
+        #cert-no {
+            top: 61%;
+            left: 23%;
+        }
+
+        #cert-org {
+            top: 71.5%;
+            left: 23%;
+        }
+
+        #photo {
+            top: 16%;
+            left: 74%;
+            width: 22.5%;
+            height: 45%;
+        }
+
+        #photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        #seal {
+            top: 15%;
+            left: 38%;
+            width: 39%;
+            height: auto;
+        }
+
+        #seal img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .qr-code-area {
+            top: 67%;
+            left: 76%;
+            width: 17%;
+            height: auto;
+        }
+
+        .qr-code-area #qrcode {
+            width: 100%;
+            height: auto;
+        }
+
+        .qr-code-area #qrcode img,
+        .qr-code-area #qrcode canvas {
+            width: 100% !important;
+            height: auto !important;
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F0EFF5">
+    <div>
+        <div class="content content-boxed overflow-hidden">
+            <div class="row text-center push-30-t">
+                <div class="h3 font-w600 text-black">查询成功</div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-12 push-30-t">
+                    <div id="card-pic" class="cert-container">
+                        <img src="pic/xinjiang_cert_bg.png" class="cert-image" alt="证书背景">
+                        <div class="cert-info">
+                            <div id="name">郭栋</div>
+                            <div id="gender">男</div>
+                            <div id="age">21</div>
+                            <div id="province">汉</div>
+                            <div id="id-card-no"></div>
+                            <div id="cert-date">2025-11-15</div>
+                            <div id="valid-date">2026-11-14</div>
+                            <div id="cert-no">2511160118391915</div>
+                            <div id="cert-org">长春路社区卫生服务中心</div>
+                            <div id="photo">
+                                <img src="uploads/1746776723__55899627989503.jpg">
+                            </div>
+                            <div id="seal">
+                                <img src="pic/xinjiang_cert_seal.jpg">
+                            </div>
+                            <div id="qr-code-pic" class="qr-code-area">
+                                <div id="qrcode" title="https://ccc.ngrok.app/cert/2511160118391915"><canvas width="200"
+                                        height="200" style="display: none;"></canvas><img src="qrcodes/qrcode.png"
+                                        style="display: block;"></div>
+                                <script>
+                                    new QRCode(document.getElementById("qrcode"), {
+                                        text: "https:\/\/ccc.ngrok.app\/cert\/2511160118391915",
+                                        width: 200,
+                                        height: 200,
+                                        colorDark: "#000000",
+                                        colorLight: "#ffffff",
+                                        correctLevel: QRCode.CorrectLevel.H
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 push-30-t text-center">
+                    <div class="h4 font-w400">注意事项</div>
+                    <p class="h4 font-w400 push-10-t" style="line-height: 35px">
+                        1、请使用彩色打印机打印，打印完成后，自行裁剪粘贴至公示栏。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+
+    <button id="downloadCardPicBtn"
+        style="position: fixed; bottom: 175px; right: 10px; z-index: 10000; background-color: rgb(24, 144, 255); color: rgb(255, 255, 255); border: none; border-radius: 6px; padding: 8px 12px; font-size: 13px; line-height: 1.5; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px; transition: 0.2s; transform: scale(1); user-select: none; writing-mode: vertical-rl; text-orientation: upright; width: 36px; height: auto; display: flex; align-items: center; justify-content: center; letter-spacing: 2px;">下载健康证</button><button
+        id="downloadQrCodeBtn"
+        style="position: fixed; bottom: 70px; right: 10px; z-index: 10000; background-color: rgb(82, 196, 26); color: rgb(255, 255, 255); border: none; border-radius: 6px; padding: 8px 12px; font-size: 13px; line-height: 1.5; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px; transition: 0.2s; transform: scale(1); user-select: none; writing-mode: vertical-rl; text-orientation: upright; width: 36px; height: auto; display: flex; align-items: center; justify-content: center; letter-spacing: 2px;">下载二维码</button><button
+        id="goBackBtn" title="返回"
+        style="position: fixed; bottom: 20px; right: 10px; z-index: 10000; background-color: rgb(255, 255, 255); color: rgb(15, 23, 42); border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 50%; padding: 0px; font-size: 13px; line-height: normal; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px; transition: 0.2s; transform: scale(1); user-select: none; writing-mode: horizontal-tb; text-orientation: mixed; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; letter-spacing: 0px;"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+        </svg></button>
+</body>
+
+</html>
